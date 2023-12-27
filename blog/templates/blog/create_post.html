@@ -1,0 +1,42 @@
+{% extends 'base.html' %} {% block content %} {% load static %}
+
+<div class="post-create container">
+  <div class="post-create__title">Добавить статью</div>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="post-create__form">
+      {{form.title}} {% for error in form.title.errors %}
+      <p style="color: red;">{{ error }}</p>
+
+      {% endfor %}
+      <input
+        type="submit"
+        class="button post-create__published"
+        value="Опубликовать"
+      />
+    </div>
+    <div class="post-create__form">
+      {{form.content}} {% for error in form.content.errors %}
+      <p style="color: red;">{{ error }}</p>
+
+      {% endfor %}
+      <div class="post-create__image">
+        <div class="upload-image__text">
+          Загрузить изображение
+        </div>
+        {{form.image}} {% for error in form.image.errors %}
+        <p style="color: red;">{{ error }}</p>
+        {% endfor %}
+      </div>
+    </div>
+  </form>
+</div>
+<script
+  type="text/javascript"
+  src="{% static 'ckeditor/ckeditor-init.js' %}"
+></script>
+<script
+  type="text/javascript"
+  src="{% static 'ckeditor/ckeditor/ckeditor.js' %}"
+></script>
+{% endblock %}

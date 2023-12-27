@@ -1,0 +1,15 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<div class="post-detail container-small">
+  <div class="post-detail__title">
+    {{object.title}}
+  </div>
+  <div class="post-detail__image">
+    <img src="{{object.image.url}}" style="width: 100%;" />
+  </div>
+  <div class="post-detail__content">
+    {{object.content|safe}}
+  </div>
+</div>
+
+{% endblock %}

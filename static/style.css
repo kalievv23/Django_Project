@@ -1,0 +1,274 @@
+/* Fonts */
+@font-face {
+  font-family: "Museo";
+  src: local("Abc"), url("./fonts/Museocyrl500.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Rounded Regular";
+  src: local("Abc"), url("./fonts/MPLUSRounded1c-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Rounded Bold";
+  src: local("Abc"),
+    url("./fonts/MPLUSRounded1c-ExtraBold.ttf") format("truetype");
+}
+
+/* General Style */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.container {
+  margin: 0px auto;
+  width: 1200px;
+}
+
+.container-small {
+  margin: 0px auto;
+  width: 800px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-family: "Rounded Regular";
+  color: #fff;
+  background-color: #315af2;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background: #315af2bf;
+}
+
+/* Header Style */
+.header {
+  height: 80px;
+  border-bottom: 2px solid #cdcdcd;
+}
+
+.header__wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+
+.header__text {
+  font-family: "Rounded Bold";
+  font-size: 22px;
+  color: #010101;
+  margin-left: 20px;
+  line-height: 1px;
+}
+
+.header__button {
+  font-size: 14px;
+  width: 166px;
+  height: 32px;
+}
+
+/* New Post Style */
+.post-new {
+  border-bottom: 2px solid #cdcdcd;
+}
+
+.post-new-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-new__text {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
+
+.post-new__new {
+  font-family: "Rounded Regular";
+  font-weight: normal;
+  color: #e9399c;
+  font-size: 19px;
+  margin: 23px 0px 20px 0px;
+}
+
+.post-new__title {
+  font-family: "Museo";
+  font-weight: bold;
+  font-size: 44px;
+  color: #315af2;
+  margin-bottom: 20px;
+}
+
+.post-new__content {
+  font-family: "Rounded Regular";
+  width: 1200px;
+  margin-bottom: 23px;
+  word-wrap: break-word;
+}
+
+.post-new__button {
+  font-family: "Museo";
+  font-weight: bold;
+  font-size: 30px;
+  width: 150px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.post-new__image {
+  display: flex;
+  align-items: center;
+  width: 400px;
+  height: 400px;
+  margin-right: 50px;
+}
+
+/* Posts List Grid Style */
+.another-posts__text {
+  font-family: "Museo";
+  font-weight: bold;
+  font-size: 34px;
+  color: #315af2;
+  margin: 21px 0px;
+}
+
+.another-posts__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 40px;
+  margin-bottom: 50px;
+}
+
+.post-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 20px;
+  border: 2px solid #cdcdcd;
+  transition: 0.35s;
+}
+
+.post-card:hover {
+  cursor: pointer;
+  box-shadow: 13px 11px 27px -6px #353434;
+}
+
+.post-card__date {
+  align-self: start;
+  color: #979797;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.post-card__image {
+  width: 200px;
+}
+
+.post-card__title {
+  text-align: center;
+  margin-top: 15px;
+  font-family: "Museo";
+  font-weight: bold;
+  font-size: 24px;
+  color: #315af2;
+}
+
+/* Posts Create Style */
+.post-create__title {
+  font-family: "Museo";
+  font-weight: bold;
+  font-size: 34px;
+  color: #315af2;
+  margin: 30px 0 24px 0;
+}
+
+.post-create__add-title {
+  width: 827px;
+  height: 48px;
+  padding-left: 10px;
+  color: #315af2;
+  font-family: "Rounded Regular";
+  outline: none;
+  border-radius: 7px;
+  border: 1px solid #979797;
+  font-size: 19px;
+}
+
+.post-create__published {
+  width: 200px;
+  height: 39px;
+  margin-left: 20px;
+  font-size: 17px;
+  background-color: #e9399c;
+  border: none;
+}
+
+.post-create__published:hover {
+  background-color: #f75cb4;
+}
+
+.post-create__form {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.post-create__image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 20px;
+  padding: 10px;
+  border: 1px solid #cdcdcd;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+
+.upload-image__text {
+  font-family: "Museo";
+  font-weight: bold;
+  font-size: 19px;
+  color: #315af2;
+  margin: 13px 0;
+}
+/* Post Detail Style*/
+.post-detail {
+  margin-top: 30px;
+}
+
+.post-detail__title {
+  font-family: "Museo";
+  font-weight: bold;
+  font-size: 34px;
+  color: #315af2;
+  margin: 30px 0;
+}
+
+.post-detail__image {
+  margin-bottom: 40px;
+}
+
+.post-detail__content {
+  font-family: "Rounded Regular";
+  width: 800px;
+  word-wrap: break-word;
+}
